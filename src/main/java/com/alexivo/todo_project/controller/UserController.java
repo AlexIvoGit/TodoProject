@@ -20,4 +20,9 @@ public class UserController {
     public void deleteUser(@PathVariable Long id) {
         userService.delete(id);
     }
+
+    @GetMapping("/user/me")
+    public Users getCurrentUser() {
+        return userService.getCurrentUser();
+    }
 }
